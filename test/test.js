@@ -3,7 +3,9 @@
 var request = require("supertest");
 var should = require("should");
 var app = require('../app');
-
+/**
+ * Start simple unit test.
+ */
 describe("SAMPLE unit test", function () {
     it("should return home page", function (done) {
         request(app).get("/").expect("Content-type", /text/).expect(200).end(function (err, res) {
